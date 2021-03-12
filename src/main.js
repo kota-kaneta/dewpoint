@@ -9,4 +9,7 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
+var VueScrollTo = require('vue-scrollto');
 Vue.use(VueScrollTo)
+
+Vue.config.productionTip = false
