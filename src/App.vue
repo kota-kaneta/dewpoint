@@ -1,18 +1,21 @@
 <template>
-  <v-app id="app">
-    <div class="top-nav">
+  <div id="app">
+    <div class="left-nav">
+      <a v-scroll-to="'#home'">t i t l e</a>
+    </div>
+    <div class="right-nav">
       <a class="nav" v-scroll-to="'#home'">Home</a>
       <a class="nav" v-scroll-to="'#about'">About</a>
       <a class="nav" v-scroll-to="'#services'">Services</a>
       <a class="nav" v-scroll-to="'#works'">Works</a>
       <a class="nav" v-scroll-to="'#contact'">Contact</a>
     </div>
-    <div id="home">home</div>
+    <div id="home">テキスト</div>
     <div id="about">about</div>
     <div id="works">works</div>
     <div id="services">services</div>
     <div id="contact">contact</div>
-  </v-app>
+  </div>
 </template>
 
 <style lang="scss">
@@ -29,23 +32,27 @@
   background-color: #ffffff;
 }
 a{
-  text-decoration-line: none;
   color: #000000!important;
+  cursor: pointer;
 }
-.top-nav{
+.left-nav{
   position: fixed;
-  top: 10px;
+  top: 50px;
+  left: 100px;
+}
+.right-nav{
+  position: fixed;
+  top: 50px;
   right: 50px;
-  display: flex;
-  font-size: 16px;
-  background-color: #ffffff80;
+  font-size: 17px;
 }
 .nav{
-  cursor: pointer;
   padding: 30px;
+  cursor: pointer;
 }
 #home,#about,#works,#services,#contact{
   height: 100vh;
+  padding-top: 200px;
 }
 </style>
 
