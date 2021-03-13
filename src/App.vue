@@ -1,21 +1,25 @@
 <template>
-  <div id="app">
-    <div class="left-nav">
-      <a v-scroll-to="'#home'">t i t l e</a>
+  <v-app>
+    <div id="app">
+      <div class="top-nav">
+        <div class="left-nav">
+          <a v-scroll-to="'#home'">t i t l e</a>
+        </div>
+        <div class="right-nav">
+          <a class="nav" v-scroll-to="'#home'">Home</a>
+          <a class="nav" v-scroll-to="'#about'">About</a>
+          <a class="nav" v-scroll-to="'#services'">Services</a>
+          <a class="nav" v-scroll-to="'#works'">Works</a>
+          <a class="nav" v-scroll-to="'#contact'">Contact</a>
+        </div>
+      </div>
+      <div id="home">テキスト</div>
+      <div id="about">about</div>
+      <div id="works">works</div>
+      <div id="services">services</div>
+      <div id="contact">contact</div>
     </div>
-    <div class="right-nav">
-      <a class="nav" v-scroll-to="'#home'">Home</a>
-      <a class="nav" v-scroll-to="'#about'">About</a>
-      <a class="nav" v-scroll-to="'#services'">Services</a>
-      <a class="nav" v-scroll-to="'#works'">Works</a>
-      <a class="nav" v-scroll-to="'#contact'">Contact</a>
-    </div>
-    <div id="home">テキスト</div>
-    <div id="about">about</div>
-    <div id="works">works</div>
-    <div id="services">services</div>
-    <div id="contact">contact</div>
-  </div>
+  </v-app>
 </template>
 
 <style lang="scss">
@@ -33,17 +37,21 @@
 }
 a{
   color: #000000!important;
-  cursor: pointer;
+}
+.top-nav{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 150px;
 }
 .left-nav{
-  position: fixed;
-  top: 50px;
-  left: 100px;
+  position: absolute;
+  left: 60px;
 }
 .right-nav{
-  position: fixed;
-  top: 50px;
-  right: 50px;
+  position: absolute;
+  right: 30px;
   font-size: 17px;
 }
 .nav{
